@@ -205,14 +205,15 @@ select.formbold-form-input,
     width: 45%;
 }
 
-.miembro1 {
-    visibility: hidden;
+.formhide {
+    transition: opacity 1s ease-in-out, max-height 1s ease-in-out;
     opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
+    max-height: 0;
+    overflow: hidden;
 }
 
-.oculto {
-    visibility: visible; 
+.mostrar {
     opacity: 1;
+    max-height: 1000px;
 }
 

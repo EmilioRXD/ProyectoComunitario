@@ -14,7 +14,7 @@
         <!-- Learn More: https://formbold.com -->
         <div class="formbold-form-wrapper">
 
-            <div style=" display: flex; justify-content: center; align-items: center;">
+            <div style=" display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
                 <img style="max-width: 60%;" src="assets/undraw_no_data_re_kwbl.svg">
             </div>
             <form>
@@ -32,13 +32,13 @@
                 <!-- Form Nombre -->
                 <div class="formbold-mb-3">
                     <label for="firstname" class="formbold-form-label">Nombre</label>
-                    <input type="text" name="firstname" id="firstname" placeholder="Ingrese su Nombre"
+                    <input type="text" name="firstname" id="firstname" placeholder="Ingrese su nombre"
                         class="formbold-form-input" />
                 </div>
 
                 <div class="formbold-mb-3">
                     <label for="lastname" class="formbold-form-label">Apellido</label>
-                    <input type="text" name="lastname" id="lastname" placeholder="Ingrese su Apellido"
+                    <input type="text" name="lastname" id="lastname" placeholder="Ingrese su apellido"
                         class="formbold-form-input">
                 </div>
 
@@ -46,58 +46,72 @@
                 <div class="formbold-mb-3">
                     <label class="formbold-form-label">Género</label>
                     <select class="formbold-form-input" name="gender" id="gender">
-                        <option selected>Seleccione su género</option>
+                        <option value="" disabled selected>Seleccione su género</option>
                         <option value="male">Masculino</option>
                         <option value="female">Femenino</option>
                         <option value="others">Otro</option>
                     </select>
                 </div>
 
-                <!-- Form Correo -->
-                <div class="formbold-mb-3">
-                    <label for="email" class="formbold-form-label"> Correo </label>
-                    <input type="email" name="email" id="email" placeholder="ejemplo@email.com"
-                        class="formbold-form-input" />
-                </div>
-
-                <!-- Form Télefono -->
-                <div class="formbold-mb-3 formbold-input-wrapp">
-                    <label for="phone" class="formbold-form-label"> Teléfono </label>
-                    <div>
-                        <input type="text" name="phone" id="phone" placeholder="Número de teléfono"
-                            class="formbold-form-input" />
-                    </div>
-                </div>
-
-                <!-- Form Dirección -->
-                <div class="formbold-mb-3">
-                    <label for="address" class="formbold-form-label"> Dirección </label>
-                    <input type="text" name="address" id="address" placeholder="Street address"
-                        class="formbold-form-input formbold-mb-3" />
-                    <input type="text" name="address2" id="address2" placeholder="Street address line 2"
-                        class="formbold-form-input" />
-                </div>
-
                 <!-- Form Jefe de Familia -->
                 <div class="formbold-mb-3">
                     <label class="formbold-form-label">¿Es usted el jefe de familia?</label>
                     <select class="formbold-form-input" name="boss" id="boss">
+                        <option value="" disabled selected>Selecciona una opción</option>
                         <option value="0">No</option>
                         <option value="1">Si</option>
                     </select>
                 </div>
 
-                <!-- Form Miembros de la Familia -->
-                <div class="formbold-mb-3">
-                    <label for="family" class="formbold-form-label">¿Cuántos miembros conforman la familia?
-                        <i>(Incluyendolo a usted)</i></label>
-                    <input type="number" min="0" max="8" name="family" id="family"
-                        placeholder="Ingrese el número de miembros" class="formbold-form-input">
+                <!-- Form Especial Jefe de Familia -->
+                <div class="formhide familia">
+                    <!-- Form Télefono -->
+                    <div class="formbold-mb-3 formbold-input-wrapp">
+                        <label for="phone" class="formbold-form-label"> Teléfono </label>
+                        <div>
+                            <input type="text" name="phone" id="phone" placeholder="Número de teléfono"
+                                class="formbold-form-input" />
+                        </div>
+                    </div>
+
+                    <!-- Form Correo -->
+                    <div class="formbold-mb-3">
+                        <label for="email" class="formbold-form-label"> Correo </label>
+                        <input type="email" name="email" id="email" placeholder="ejemplo@email.com"
+                            class="formbold-form-input" />
+                    </div>
+
+                    <!-- Form Dirección -->
+                    <div class="formbold-mb-3">
+                        <label for="address" class="formbold-form-label"> Dirección </label>
+                        <input type="text" name="address" id="address" placeholder="Street address"
+                            class="formbold-form-input formbold-mb-3" />
+                        <input type="text" name="address2" id="address2" placeholder="Street address line 2"
+                            class="formbold-form-input" />
+                    </div>
+
+                    <!-- Form Miembros de la Familia -->
+                    <div class="formbold-mb-3">
+                        <label for="family" class="formbold-form-label">¿Cuántos miembros conforman la familia?
+                            <i>(Incluyendolo a usted)</i></label>
+                        <input type="number" min="0" max="8" name="family" id="family"
+                            placeholder="Ingrese el número de miembros" class="formbold-form-input">
+                    </div>
                 </div>
 
-                <button type="button" onclick="desvanecer()">Devanecer</button>
+                <!-- Form Especial Carga Familiar -->
+                <div class="formhide carga">
+                    <!-- Form Miembros de la Familia -->
+                    <div class="formbold-mb-3">
+                        <label for="relationship" class="formbold-form-label">Ingrese la cédula del Jefe de
+                            Familia</label>
+                        <input type="number" min="0" max="8" name="relationship" id="relationship"
+                            placeholder="Ingrese el número de miembros" class="formbold-form-input">
+                    </div>
+                </div>
 
-                <div class="miembro1">
+                <!-- <button type="button" onclick="desvanecer()" class="formbold-btn">Mostrar</button> -->
+                <div class="formhide miembro1">
                     <!-- Form Cédula -->
                     <div class="formbold-mb-3">
                         <h3>Miembro 1</h3>
@@ -129,49 +143,20 @@
                             <option value="others">Otro</option>
                         </select>
                     </div>
-                </div>
 
-                <!-- Form Cédula -->
-                <div class="formbold-mb-3">
-                    <h3>Miembro 2</h3>
-                    <label for="cedula" class="formbold-form-label">Cédula</label>
-                    <input type="text" name="cedula" id="cedula" placeholder="Ingrese su cédula"
-                        class="formbold-form-input">
-                </div>
-
-                <!-- Form Nombre -->
-                <div class="formbold-input-wrapp formbold-mb-3">
-                    <label for="firstname" class="formbold-form-label"> Nombre Completo </label>
-                    <div>
-                        <input type="text" name="firstname" id="firstname" placeholder="Nombre"
-                            class="formbold-form-input" />
-
-                        <input type="text" name="lastname" id="lastname" placeholder="Apellido"
-                            class="formbold-form-input" />
+                    <!-- Form Parentesco -->
+                    <div class="formbold-mb-3">
+                        <label class="formbold-form-label">¿Cuál es el parentesco con este miembro familiar?</label>
+                        <select class="formbold-form-input" name="gender" id="gender">
+                            <option selected>Seleccione un opción</option>
+                            <option value="male">Hijo/a</option>
+                            <option value="female">Conyuge</option>
+                            <option value="others">Papá</option>
+                        </select>
                     </div>
                 </div>
 
-                <!-- Form Género -->
-                <div class="formbold-mb-3">
-                    <label class="formbold-form-label">Género</label>
-                    <select class="formbold-form-input" name="gender" id="gender">
-                        <option selected>Seleccione un género</option>
-                        <option value="male">Masculino</option>
-                        <option value="female">Femenino</option>
-                        <option value="others">Otro</option>
-                    </select>
-                </div>
 
-                <!-- Form Parentesco -->
-                <div class="formbold-mb-3">
-                    <label class="formbold-form-label">¿Cuál es el parentesco con este miembro familiar?</label>
-                    <select class="formbold-form-input" name="gender" id="gender">
-                        <option selected>Seleccione un opción</option>
-                        <option value="male">Hijo/a</option>
-                        <option value="female">Conyuge</option>
-                        <option value="others">Papá</option>
-                    </select>
-                </div>
 
                 <!-- Cargar Imagen -->
                 <!--                 
@@ -202,7 +187,7 @@
                     </label>
                 </div> -->
 
-                <button class="formbold-btn">Submit</button>
+                <button class="formbold-btn">Enviar</button>
             </form>
         </div>
     </div>
