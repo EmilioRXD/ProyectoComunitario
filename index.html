@@ -17,26 +17,29 @@
             <div style=" display: flex; justify-content: center; align-items: center;">
                 <img style="max-width: 60%;" src="assets/undraw_no_data_re_kwbl.svg">
             </div>
-            <form action="https://formbold.com/s/FORM_ID" method="POST">
+            <form>
+
+                <!-- action="https://formbold.com/s/FORM_ID" method="POST" -->
 
                 <!-- Form Cédula -->
                 <div class="formbold-mb-3">
-                    <h2>Formulario de Registro</h2>
+                    <h3>Formulario de Registro</h3>
                     <label for="cedula" class="formbold-form-label">Cédula</label>
                     <input type="text" name="cedula" id="cedula" placeholder="Ingrese su cédula"
                         class="formbold-form-input">
                 </div>
 
                 <!-- Form Nombre -->
-                <div class="formbold-input-wrapp formbold-mb-3">
-                    <label for="firstname" class="formbold-form-label"> Nombre Completo </label>
-                    <div>
-                        <input type="text" name="firstname" id="firstname" placeholder="Nombre"
-                            class="formbold-form-input" />
+                <div class="formbold-mb-3">
+                    <label for="firstname" class="formbold-form-label">Nombre</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="Ingrese su Nombre"
+                        class="formbold-form-input" />
+                </div>
 
-                        <input type="text" name="lastname" id="lastname" placeholder="Apellido"
-                            class="formbold-form-input" />
-                    </div>
+                <div class="formbold-mb-3">
+                    <label for="lastname" class="formbold-form-label">Apellido</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Ingrese su Apellido"
+                        class="formbold-form-input">
                 </div>
 
                 <!-- Form Género -->
@@ -92,51 +95,45 @@
                         placeholder="Ingrese el número de miembros" class="formbold-form-input">
                 </div>
 
-                <h2>Miembro 1</h2>
-                <!-- Form Cédula -->
-                <div class="formbold-mb-3">
-                    <label for="cedula" class="formbold-form-label">Cédula</label>
-                    <input type="text" name="cedula" id="cedula" placeholder="Ingrese su cédula"
-                        class="formbold-form-input">
-                </div>
+                <button type="button" onclick="desvanecer()">Devanecer</button>
 
-                <!-- Form Nombre -->
-                <div class="formbold-input-wrapp formbold-mb-3">
-                    <label for="firstname" class="formbold-form-label"> Nombre Completo </label>
-                    <div>
-                        <input type="text" name="firstname" id="firstname" placeholder="Nombre"
-                            class="formbold-form-input" />
+                <div class="miembro1">
+                    <!-- Form Cédula -->
+                    <div class="formbold-mb-3">
+                        <h3>Miembro 1</h3>
+                        <label for="cedula" class="formbold-form-label">Cédula</label>
+                        <input type="text" name="cedula" id="cedula" placeholder="Ingrese su cédula"
+                            class="formbold-form-input">
+                    </div>
 
-                        <input type="text" name="lastname" id="lastname" placeholder="Apellido"
+                    <!-- Form Nombre -->
+                    <div class="formbold-mb-3">
+                        <label for="firstname" class="formbold-form-label">Nombre</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Ingrese su Nombre"
                             class="formbold-form-input" />
+                    </div>
+
+                    <div class="formbold-mb-3">
+                        <label for="lastname" class="formbold-form-label">Apellido</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Ingrese su Apellido"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Género -->
+                    <div class="formbold-mb-3">
+                        <label class="formbold-form-label">Género</label>
+                        <select class="formbold-form-input" name="gender" id="gender">
+                            <option selected>Seleccione su género</option>
+                            <option value="male">Masculino</option>
+                            <option value="female">Femenino</option>
+                            <option value="others">Otro</option>
+                        </select>
                     </div>
                 </div>
 
-                <!-- Form Género -->
-                <div class="formbold-mb-3">
-                    <label class="formbold-form-label">Género</label>
-                    <select class="formbold-form-input" name="gender" id="gender">
-                        <option selected>Seleccione un género</option>
-                        <option value="male">Masculino</option>
-                        <option value="female">Femenino</option>
-                        <option value="others">Otro</option>
-                    </select>
-                </div>
-
-                <!-- Form Parentesco -->
-                <div class="formbold-mb-3">
-                    <label class="formbold-form-label">¿Cuál es el parentesco con este miembro familiar?</label>
-                    <select class="formbold-form-input" name="gender" id="gender">
-                        <option selected>Seleccione un opción</option>
-                        <option value="male">Hijo/a</option>
-                        <option value="female">Conyuge</option>
-                        <option value="others">Papá</option>
-                    </select>
-                </div>
-
                 <!-- Form Cédula -->
                 <div class="formbold-mb-3">
-                    <h2>Miembro 2</h2>
+                    <h3>Miembro 2</h3>
                     <label for="cedula" class="formbold-form-label">Cédula</label>
                     <input type="text" name="cedula" id="cedula" placeholder="Ingrese su cédula"
                         class="formbold-form-input">
@@ -209,6 +206,7 @@
             </form>
         </div>
     </div>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
