@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Agragar Validación de datos negativos y mayores a 8 y menores a 0
 
-        const members = ['.member1', '.member2', '.member3', '.member4', '.member5', '.member6', '.member7', '.member8'];
+        const members = ['.member2', '.member3', '.member4', '.member5', '.member6', '.member7', '.member8'];
 
-        if (selectedOption == 0) {
+        if (selectedOption <=1 || selectedOption >=9) {
             let elements = document.querySelectorAll('.formmember');
             elements.forEach(element => {
                 element.classList.remove('mostrar');
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             members.forEach((member, index) => {
                 let elements = document.querySelector(member)
-                if (index < selectedOption) {
+                if (index < selectedOption-1) {
                     elements.classList.add('mostrar')
                 }
             });

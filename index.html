@@ -10,8 +10,6 @@
 
 <body>
     <div class="formbold-main-wrapper">
-        <!-- Author: FormBold Team -->
-        <!-- Learn More: https://formbold.com -->
         <div class="formbold-form-wrapper">
 
             <div style=" display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
@@ -47,9 +45,9 @@
                     <label class="formbold-form-label">Género</label>
                     <select class="formbold-form-input" name="gender" id="gender">
                         <option value="" disabled selected>Seleccione su género</option>
-                        <option value="male">Masculino</option>
-                        <option value="female">Femenino</option>
-                        <option value="others">Otro</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
+                        <option value="3">Otro</option>
                     </select>
                 </div>
 
@@ -111,50 +109,6 @@
                 </div>
 
                 <!-- <button type="button" onclick="desvanecer()" class="formbold-btn">Mostrar</button> -->
-                <div class="formhide formmember member1">
-                    <!-- Form Cédula -->
-                    <div class="formbold-mb-3">
-                        <h3>Miembro 1</h3>
-                        <label for="cedula" class="formbold-form-label">Cédula</label>
-                        <input type="text" name="cedula" id="cedula" placeholder="Ingrese su cédula"
-                            class="formbold-form-input">
-                    </div>
-
-                    <!-- Form Nombre -->
-                    <div class="formbold-mb-3">
-                        <label for="firstname" class="formbold-form-label">Nombre</label>
-                        <input type="text" name="firstname" id="firstname" placeholder="Ingrese su Nombre"
-                            class="formbold-form-input" />
-                    </div>
-
-                    <div class="formbold-mb-3">
-                        <label for="lastname" class="formbold-form-label">Apellido</label>
-                        <input type="text" name="lastname" id="lastname" placeholder="Ingrese su Apellido"
-                            class="formbold-form-input">
-                    </div>
-
-                    <!-- Form Género -->
-                    <div class="formbold-mb-3">
-                        <label class="formbold-form-label">Género</label>
-                        <select class="formbold-form-input" name="gender" id="gender">
-                            <option selected>Seleccione su género</option>
-                            <option value="male">Masculino</option>
-                            <option value="female">Femenino</option>
-                            <option value="others">Otro</option>
-                        </select>
-                    </div>
-
-                    <!-- Form Parentesco -->
-                    <div class="formbold-mb-3">
-                        <label class="formbold-form-label">¿Cuál es el parentesco con este miembro familiar?</label>
-                        <select class="formbold-form-input" name="gender" id="gender">
-                            <option selected>Seleccione un opción</option>
-                            <option value="male">Hijo/a</option>
-                            <option value="female">Conyuge</option>
-                            <option value="others">Papá</option>
-                        </select>
-                    </div>
-                </div>
 
                 <div class="formhide formmember member2">
                     <!-- Form Cédula -->
@@ -183,20 +137,36 @@
                         <label class="formbold-form-label">Género</label>
                         <select class="formbold-form-input" name="gender" id="gender">
                             <option selected>Seleccione su género</option>
-                            <option value="male">Masculino</option>
-                            <option value="female">Femenino</option>
-                            <option value="others">Otro</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
                         </select>
                     </div>
 
                     <!-- Form Parentesco -->
                     <div class="formbold-mb-3">
                         <label class="formbold-form-label">¿Cuál es el parentesco con este miembro familiar?</label>
-                        <select class="formbold-form-input" name="gender" id="gender">
+                        <select class="formbold-form-input" name="kinship" id="kinship">
                             <option selected>Seleccione un opción</option>
-                            <option value="male">Hijo/a</option>
-                            <option value="female">Conyuge</option>
-                            <option value="others">Papá</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
                         </select>
                     </div>
                 </div>
@@ -228,20 +198,36 @@
                         <label class="formbold-form-label">Género</label>
                         <select class="formbold-form-input" name="gender" id="gender">
                             <option selected>Seleccione su género</option>
-                            <option value="male">Masculino</option>
-                            <option value="female">Femenino</option>
-                            <option value="others">Otro</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
                         </select>
                     </div>
 
                     <!-- Form Parentesco -->
                     <div class="formbold-mb-3">
                         <label class="formbold-form-label">¿Cuál es el parentesco con este miembro familiar?</label>
-                        <select class="formbold-form-input" name="gender" id="gender">
+                        <select class="formbold-form-input" name="kinship" id="kinship">
                             <option selected>Seleccione un opción</option>
-                            <option value="male">Hijo/a</option>
-                            <option value="female">Conyuge</option>
-                            <option value="others">Papá</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
                         </select>
                     </div>
                 </div>
@@ -273,20 +259,36 @@
                         <label class="formbold-form-label">Género</label>
                         <select class="formbold-form-input" name="gender" id="gender">
                             <option selected>Seleccione su género</option>
-                            <option value="male">Masculino</option>
-                            <option value="female">Femenino</option>
-                            <option value="others">Otro</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
                         </select>
                     </div>
 
                     <!-- Form Parentesco -->
                     <div class="formbold-mb-3">
                         <label class="formbold-form-label">¿Cuál es el parentesco con este miembro familiar?</label>
-                        <select class="formbold-form-input" name="gender" id="gender">
+                        <select class="formbold-form-input" name="kinship" id="kinship">
                             <option selected>Seleccione un opción</option>
-                            <option value="male">Hijo/a</option>
-                            <option value="female">Conyuge</option>
-                            <option value="others">Papá</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
                         </select>
                     </div>
                 </div>
@@ -318,20 +320,36 @@
                         <label class="formbold-form-label">Género</label>
                         <select class="formbold-form-input" name="gender" id="gender">
                             <option selected>Seleccione su género</option>
-                            <option value="male">Masculino</option>
-                            <option value="female">Femenino</option>
-                            <option value="others">Otro</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
                         </select>
                     </div>
 
                     <!-- Form Parentesco -->
                     <div class="formbold-mb-3">
                         <label class="formbold-form-label">¿Cuál es el parentesco con este miembro familiar?</label>
-                        <select class="formbold-form-input" name="gender" id="gender">
+                        <select class="formbold-form-input" name="kinship" id="kinship">
                             <option selected>Seleccione un opción</option>
-                            <option value="male">Hijo/a</option>
-                            <option value="female">Conyuge</option>
-                            <option value="others">Papá</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
                         </select>
                     </div>
                 </div>
@@ -363,20 +381,36 @@
                         <label class="formbold-form-label">Género</label>
                         <select class="formbold-form-input" name="gender" id="gender">
                             <option selected>Seleccione su género</option>
-                            <option value="male">Masculino</option>
-                            <option value="female">Femenino</option>
-                            <option value="others">Otro</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
                         </select>
                     </div>
 
                     <!-- Form Parentesco -->
                     <div class="formbold-mb-3">
                         <label class="formbold-form-label">¿Cuál es el parentesco con este miembro familiar?</label>
-                        <select class="formbold-form-input" name="gender" id="gender">
+                        <select class="formbold-form-input" name="kinship" id="kinship">
                             <option selected>Seleccione un opción</option>
-                            <option value="male">Hijo/a</option>
-                            <option value="female">Conyuge</option>
-                            <option value="others">Papá</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
                         </select>
                     </div>
                 </div>
@@ -408,20 +442,36 @@
                         <label class="formbold-form-label">Género</label>
                         <select class="formbold-form-input" name="gender" id="gender">
                             <option selected>Seleccione su género</option>
-                            <option value="male">Masculino</option>
-                            <option value="female">Femenino</option>
-                            <option value="others">Otro</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
                         </select>
                     </div>
 
                     <!-- Form Parentesco -->
                     <div class="formbold-mb-3">
                         <label class="formbold-form-label">¿Cuál es el parentesco con este miembro familiar?</label>
-                        <select class="formbold-form-input" name="gender" id="gender">
+                        <select class="formbold-form-input" name="kinship" id="kinship">
                             <option selected>Seleccione un opción</option>
-                            <option value="male">Hijo/a</option>
-                            <option value="female">Conyuge</option>
-                            <option value="others">Papá</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
                         </select>
                     </div>
                 </div>
@@ -453,20 +503,36 @@
                         <label class="formbold-form-label">Género</label>
                         <select class="formbold-form-input" name="gender" id="gender">
                             <option selected>Seleccione su género</option>
-                            <option value="male">Masculino</option>
-                            <option value="female">Femenino</option>
-                            <option value="others">Otro</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
                         </select>
                     </div>
 
                     <!-- Form Parentesco -->
                     <div class="formbold-mb-3">
                         <label class="formbold-form-label">¿Cuál es el parentesco con este miembro familiar?</label>
-                        <select class="formbold-form-input" name="gender" id="gender">
+                        <select class="formbold-form-input" name="kinship" id="kinship">
                             <option selected>Seleccione un opción</option>
-                            <option value="male">Hijo/a</option>
-                            <option value="female">Conyuge</option>
-                            <option value="others">Papá</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
                         </select>
                     </div>
                 </div>
@@ -506,6 +572,8 @@
         </div>
     </div>
     <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/connection.js"></script>
 </body>
 
 </html>
