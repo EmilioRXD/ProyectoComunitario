@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+
+            <div style=" display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
+                <img style="max-width: 60%;" src="../assets/undraw_no_data_re_kwbl.svg">
+            </div>
+            <form>
+
+                <!-- action="https://formbold.com/s/FORM_ID" method="POST" -->
+
+                <!-- Form Cédula -->
+                <div class="formbold-mb-3">
+                    <h3>Formulario de Registro</h3>
+                    <label for="cedula" class="formbold-form-label">Cédula</label>
+                    <input type="text" name="cedula" id="cedula" placeholder="Ingrese su cédula"
+                        class="formbold-form-input">
+                </div>
+
+                <!-- Form Nombre -->
+                <div class="formbold-mb-3">
+                    <label for="firstname" class="formbold-form-label">Nombre</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="Ingrese su nombre"
+                        class="formbold-form-input" />
+                </div>
+
+                <div class="formbold-mb-3">
+                    <label for="lastname" class="formbold-form-label">Apellido</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Ingrese su apellido"
+                        class="formbold-form-input">
+                </div>
+
+                <!-- Form Género -->
+                <div class="formbold-mb-3">
+                    <label for="gender" class="formbold-form-label">Género</label>
+                    <select class="formbold-form-input" name="gender" id="gender">
+                        <option value="" disabled selected>Seleccione su género</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
+                        <option value="3">Otro</option>
+                    </select>
+                </div>
+
+                <!-- Form Jefe de Calle -->
+                <div class="formbold-mb-3">
+                    <label for="streetBoss" class="formbold-form-label">Ingrese la cédula del jefe de
+                        calle</label>
+                    <input type="text" name="streetBoss" id="streetBoss" placeholder="Ingrese la cédula"
+                        class="formbold-form-input">
+                </div>
+
+                <!-- Form Jefe de Familia -->
+                <div class="formbold-mb-3">
+                    <label class="formbold-form-label">¿Es usted el jefe de familia?</label>
+                    <select class="formbold-form-input" name="boss" id="boss">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="0">No</option>
+                        <option value="1">Si</option>
+                    </select>
+                </div>
+
+                <!-- Form Especial Jefe de Familia -->
+                <div class="formhide familia">
+                    <!-- Form Télefono -->
+                    <div class="formbold-mb-3 formbold-input-wrapp">
+                        <label for="phone" class="formbold-form-label"> Teléfono </label>
+                        <div>
+                            <input type="text" name="phone" id="phone" placeholder="Número de teléfono"
+                                class="formbold-form-input" />
+                        </div>
+                    </div>
+
+                    <!-- Form Correo -->
+                    <div class="formbold-mb-3">
+                        <label for="email" class="formbold-form-label"> Correo </label>
+                        <input type="email" name="email" id="email" placeholder="ejemplo@email.com"
+                            class="formbold-form-input" />
+                    </div>
+
+                    <!-- Form Dirección -->
+                    <div class="formbold-mb-3">
+                        <label for="address" class="formbold-form-label"> Dirección </label>
+                        <input type="text" name="address" id="address" placeholder="Street address"
+                            class="formbold-form-input formbold-mb-3" />
+                        <input type="text" name="address2" id="address2" placeholder="Street address line 2"
+                            class="formbold-form-input" />
+                    </div>
+
+                    <!-- Form Miembros de la Familia -->
+                    <div class="formbold-mb-3">
+                        <label for="family" class="formbold-form-label">¿Cuántos miembros conforman la familia?
+                            <i>(Incluyendolo a usted)</i></label>
+                        <input type="number" min="0" max="8" name="family" id="family" placeholder="min 1 - max 8"
+                            class="formbold-form-input">
+                    </div>
+                </div>
+
+                <!-- Form Especial Carga Familiar -->
+                <div class="formhide carga">
+                    <!-- Form Miembros de la Familia -->
+                    <div class="formbold-mb-3">
+                        <label for="relationship" class="formbold-form-label">Ingrese la cédula del Jefe de
+                            Familia</label>
+                        <input type="text" name="relationship" id="relationship" placeholder="Ingrese la cédula"
+                            class="formbold-form-input">
+                    </div>
+                </div>
+
+                <button type="button" onclick="getDataBaseSupabase()" class="formbold-btn">Mostrar</button>
+
+                <div class="formhide formmember member2">
+                    <!-- Form Cédula -->
+                    <div class="formbold-mb-3">
+                        <h3>Miembro 2</h3>
+                        <label for="cedula2" class="formbold-form-label">Cédula</label>
+                        <input type="text" name="cedula2" id="cedula2" placeholder="Ingrese su cédula"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Nombre -->
+                    <div class="formbold-mb-3">
+                        <label for="firstname2" class="formbold-form-label">Nombre</label>
+                        <input type="text" name="firstname2" id="firstname2" placeholder="Ingrese su Nombre"
+                            class="formbold-form-input" />
+                    </div>
+
+                    <div class="formbold-mb-3">
+                        <label for="lastname2" class="formbold-form-label">Apellido</label>
+                        <input type="text" name="lastname2" id="lastname2" placeholder="Ingrese su Apellido"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Género -->
+                    <div class="formbold-mb-3">
+                        <label for="gender2" class="formbold-form-label">Género</label>
+                        <select class="formbold-form-input" name="gender2" id="gender2">
+                            <option value="" disabled selected>Seleccione su género</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- Form Parentesco -->
+                    <div class="formbold-mb-3">
+                        <label for="kinship2" class="formbold-form-label">¿Cuál es el parentesco con este miembro
+                            familiar?</label>
+                        <select class="formbold-form-input" name="kinship2" id="kinship2">
+                            <option value="" disabled selected>Seleccione un opción</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="formhide formmember member3">
+                    <!-- Form Cédula -->
+                    <div class="formbold-mb-3">
+                        <h3>Miembro 3</h3>
+                        <label for="cedula3" class="formbold-form-label">Cédula</label>
+                        <input type="text" name="cedula3" id="cedula3" placeholder="Ingrese su cédula"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Nombre -->
+                    <div class="formbold-mb-3">
+                        <label for="firstname3" class="formbold-form-label">Nombre</label>
+                        <input type="text" name="firstname3" id="firstname3" placeholder="Ingrese su Nombre"
+                            class="formbold-form-input" />
+                    </div>
+
+                    <div class="formbold-mb-3">
+                        <label for="lastname3" class="formbold-form-label">Apellido</label>
+                        <input type="text" name="lastname3" id="lastname3" placeholder="Ingrese su Apellido"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Género -->
+                    <div class="formbold-mb-3">
+                        <label for="gender3" class="formbold-form-label">Género</label>
+                        <select class="formbold-form-input" name="gender3" id="gender3">
+                            <option value="" disabled selected>Seleccione su género</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- Form Parentesco -->
+                    <div class="formbold-mb-3">
+                        <label for="kinship3" class="formbold-form-label">¿Cuál es el parentesco con este miembro
+                            familiar?</label>
+                        <select class="formbold-form-input" name="kinship3" id="kinship3">
+                            <option value="" disabled selected>Seleccione un opción</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="formhide formmember member4">
+                    <!-- Form Cédula -->
+                    <div class="formbold-mb-3">
+                        <h3>Miembro 4</h3>
+                        <label for="cedula4" class="formbold-form-label">Cédula</label>
+                        <input type="text" name="cedula4" id="cedula4" placeholder="Ingrese su cédula"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Nombre -->
+                    <div class="formbold-mb-3">
+                        <label for="firstname4" class="formbold-form-label">Nombre</label>
+                        <input type="text" name="firstname4" id="firstname4" placeholder="Ingrese su Nombre"
+                            class="formbold-form-input" />
+                    </div>
+
+                    <div class="formbold-mb-3">
+                        <label for="lastname4" class="formbold-form-label">Apellido</label>
+                        <input type="text" name="lastname4" id="lastname4" placeholder="Ingrese su Apellido"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Género -->
+                    <div class="formbold-mb-3">
+                        <label for="gender4" class="formbold-form-label">Género</label>
+                        <select class="formbold-form-input" name="gender4" id="gender4">
+                            <option value="" disabled selected>Seleccione su género</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- Form Parentesco -->
+                    <div class="formbold-mb-3">
+                        <label for="kinship4" class="formbold-form-label">¿Cuál es el parentesco con este miembro
+                            familiar?</label>
+                        <select class="formbold-form-input" name="kinship4" id="kinship4">
+                            <option value="" disabled selected>Seleccione un opción</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="formhide formmember member5">
+                    <!-- Form Cédula -->
+                    <div class="formbold-mb-3">
+                        <h3>Miembro 5</h3>
+                        <label for="cedula5" class="formbold-form-label">Cédula</label>
+                        <input type="text" name="cedula5" id="cedula5" placeholder="Ingrese su cédula"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Nombre -->
+                    <div class="formbold-mb-3">
+                        <label for="firstname5" class="formbold-form-label">Nombre</label>
+                        <input type="text" name="firstname5" id="firstname5" placeholder="Ingrese su Nombre"
+                            class="formbold-form-input" />
+                    </div>
+
+                    <div class="formbold-mb-3">
+                        <label for="lastname5" class="formbold-form-label">Apellido</label>
+                        <input type="text" name="lastname5" id="lastname5" placeholder="Ingrese su Apellido"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Género -->
+                    <div class="formbold-mb-3">
+                        <label for="gender5" class="formbold-form-label">Género</label>
+                        <select class="formbold-form-input" name="gender5" id="gender5">
+                            <option value="" disabled selected>Seleccione su género</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- Form Parentesco -->
+                    <div class="formbold-mb-3">
+                        <label for="kinship5" class="formbold-form-label">¿Cuál es el parentesco con este miembro
+                            familiar?</label>
+                        <select class="formbold-form-input" name="kinship5" id="kinship5">
+                            <option value="" disabled selected>Seleccione un opción</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="formhide formmember member6">
+                    <!-- Form Cédula -->
+                    <div class="formbold-mb-3">
+                        <h3>Miembro 6</h3>
+                        <label for="cedula6" class="formbold-form-label">Cédula</label>
+                        <input type="text" name="cedula6" id="cedula6" placeholder="Ingrese su cédula"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Nombre -->
+                    <div class="formbold-mb-3">
+                        <label for="firstname6" class="formbold-form-label">Nombre</label>
+                        <input type="text" name="firstname6" id="firstname6" placeholder="Ingrese su Nombre"
+                            class="formbold-form-input" />
+                    </div>
+
+                    <div class="formbold-mb-3">
+                        <label for="lastname6" class="formbold-form-label">Apellido</label>
+                        <input type="text" name="lastname6" id="lastname6" placeholder="Ingrese su Apellido"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Género -->
+                    <div class="formbold-mb-3">
+                        <label for="gender6" class="formbold-form-label">Género</label>
+                        <select class="formbold-form-input" name="gender6" id="gender6">
+                            <option value="" disabled selected>Seleccione su género</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- Form Parentesco -->
+                    <div class="formbold-mb-3">
+                        <label for="kinship6" class="formbold-form-label">¿Cuál es el parentesco con este miembro
+                            familiar?</label>
+                        <select class="formbold-form-input" name="kinship6" id="kinship6">
+                            <option value="" disabled selected>Seleccione un opción</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="formhide formmember member7">
+                    <!-- Form Cédula -->
+                    <div class="formbold-mb-3">
+                        <h3>Miembro 7</h3>
+                        <label for="cedula7" class="formbold-form-label">Cédula</label>
+                        <input type="text" name="cedula7" id="cedula7" placeholder="Ingrese su cédula"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Nombre -->
+                    <div class="formbold-mb-3">
+                        <label for="firstname7" class="formbold-form-label">Nombre</label>
+                        <input type="text" name="firstname7" id="firstname7" placeholder="Ingrese su Nombre"
+                            class="formbold-form-input" />
+                    </div>
+
+                    <div class="formbold-mb-3">
+                        <label for="lastname7" class="formbold-form-label">Apellido</label>
+                        <input type="text" name="lastname7" id="lastname7" placeholder="Ingrese su Apellido"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Género -->
+                    <div class="formbold-mb-3">
+                        <label for="gender7" class="formbold-form-label">Género</label>
+                        <select class="formbold-form-input" name="gender7" id="gender7">
+                            <option value="" disabled selected>Seleccione su género</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- Form Parentesco -->
+                    <div class="formbold-mb-3">
+                        <label for="kinship7" class="formbold-form-label">¿Cuál es el parentesco con este miembro
+                            familiar?</label>
+                        <select class="formbold-form-input" name="kinship7" id="kinship7">
+                            <option value="" disabled selected>Seleccione un opción</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="formhide formmember member8">
+                    <!-- Form Cédula -->
+                    <div class="formbold-mb-3">
+                        <h3>Miembro 8</h3>
+                        <label for="cedula8" class="formbold-form-label">Cédula</label>
+                        <input type="text" name="cedula8" id="cedula8" placeholder="Ingrese su cédula"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Nombre -->
+                    <div class="formbold-mb-3">
+                        <label for="firstname8" class="formbold-form-label">Nombre</label>
+                        <input type="text" name="firstname8" id="firstname8" placeholder="Ingrese su Nombre"
+                            class="formbold-form-input" />
+                    </div>
+
+                    <div class="formbold-mb-3">
+                        <label for="lastname8" class="formbold-form-label">Apellido</label>
+                        <input type="text" name="lastname8" id="lastname8" placeholder="Ingrese su Apellido"
+                            class="formbold-form-input">
+                    </div>
+
+                    <!-- Form Género -->
+                    <div class="formbold-mb-3">
+                        <label for="gender8" class="formbold-form-label">Género</label>
+                        <select class="formbold-form-input" name="gender8" id="gender8">
+                            <option value="" disabled selected>Seleccione su género</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- Form Parentesco -->
+                    <div class="formbold-mb-3">
+                        <label for="kinship8" class="formbold-form-label">¿Cuál es el parentesco con este miembro
+                            familiar?</label>
+                        <select class="formbold-form-input" name="kinship8" id="kinship8">
+                            <option value="" disabled selected>Seleccione un opción</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- Cargar Imagen -->
+                <!--                 
+                <div class="formbold-mb-3">
+                    <label for="upload" class="formbold-form-label">
+                        Upload Signature
+                    </label>
+                    <input type="file" name="upload" id="upload" class="formbold-form-input formbold-form-file" />
+                </div>
+
+                <div class="formbold-checkbox-wrapper">
+                    <label for="supportCheckbox" class="formbold-checkbox-label">
+                        <div class="formbold-relative">
+                            <input type="checkbox" id="supportCheckbox" class="formbold-input-checkbox" />
+                            <div class="formbold-checkbox-inner">
+                                <span class="formbold-opacity-0">
+                                    <svg width="11" height="8" viewBox="0 0 11 8" class="formbold-stroke-current"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.81868 0.688604L4.16688 5.4878L2.05598 3.29507C1.70417 2.92271 1.1569 2.96409 0.805082 3.29507C0.453266 3.66742 0.492357 4.24663 0.805082 4.61898L3.30689 7.18407C3.54143 7.43231 3.85416 7.55642 4.16688 7.55642C4.47961 7.55642 4.79233 7.43231 5.02688 7.18407L10.0696 2.05389C10.4214 1.68154 10.4214 1.10233 10.0696 0.729976C9.71776 0.357624 9.17049 0.357625 8.81868 0.688604Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        I agree to the defined
+                        <a href="#"> terms, conditions, and policies</a>
+                    </label>
+                </div> -->
+
+                <button class="formbold-btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/connection.js"></script>
+</body>
+
+</html>

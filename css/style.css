@@ -10,6 +10,23 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    /* Quitar el subrayado */
+    color: inherit;
+    /* Heredar el color del elemento padre */
+    background: none;
+    /* Quitar cualquier fondo aplicado */
+    border: none;
+    /* Quitar cualquier borde aplicado */
+    padding: 0;
+    /* Eliminar el padding */
+    margin: 0;
+    /* Eliminar el margen */
+    font: inherit;
+    /* Heredar la fuente del elemento padre */
+}
+
 h2 {
     color: #3A455E;
     margin-top: 32px;
@@ -216,4 +233,3 @@ select.formbold-form-input,
     opacity: 1;
     max-height: 1000px;
 }
-
