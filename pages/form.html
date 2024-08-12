@@ -15,7 +15,7 @@
             <div style=" display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
                 <img style="max-width: 50%;" src="../assets/undraw_no_data_re_kwbl.svg">
             </div>
-            <form>
+            <form id="system-form">
 
                 <!-- action="https://formbold.com/s/FORM_ID" method="POST" -->
 
@@ -114,9 +114,37 @@
                         <input type="text" name="relationship" id="relationship" placeholder="Ingrese la cédula"
                             class="formbold-form-input">
                     </div>
+
+                    <!-- Form Parentesco -->
+                    <div class="formbold-mb-3">
+                        <label for="kinship" class="formbold-form-label">¿Cuál es el parentesco con este miembro
+                            familiar?</label>
+                        <select class="formbold-form-input" name="kinship" id="kinship">
+                            <option value="" disabled selected>Seleccione un opción</option>
+                            <option value="Cónyuge">Cónyuge</option>
+                            <option value="Padre/Madre">Padre/Madre</option>
+                            <option value="Hijo/Hija">Hijo/Hija</option>
+                            <option value="Hermano/Hermana">Hermano/Hermana</option>
+                            <option value="Abuelo/Abuela">Abuelo/Abuela</option>
+                            <option value="Nieto/Nieta">Nieto/Nieta</option>
+                            <option value="Tío/Tía">Tío/Tía</option>
+                            <option value="Sobrino/Sobrina">Sobrino/Sobrina</option>
+                            <option value="Primo/Prima">Primo/Prima</option>
+                            <option value="Cuñado/Cuñada">Cuñado/Cuñada</option>
+                            <option value="Suegro/Suegra">Suegro/Suegra</option>
+                            <option value="Yerno/Nuera">Yerno/Nuera</option>
+                            <option value="Bisabuelo/Bisabuela">Bisabuelo/Bisabuela</option>
+                            <option value="Bisnieto/Bisnieta">Bisnieto/Bisnieta</option>
+                            <option value="Tatarabuelo/Tatarabuela">Tatarabuelo/Tatarabuela</option>
+                            <option value="Tataranieto/Tataranieta">Tataranieto/Tataranieta</option>
+                            <option value="Compañero(a) de vida">Compañero(a) de vida</option>
+                            <option value="Padrino/Madrina">Padrino/Madrina</option>
+                            <option value="Ahijado/Ahijada">Ahijado/Ahijada</option>
+                        </select>
+                    </div>
                 </div>
 
-                <button type="button" onclick="getDataBaseSupabase()" class="formbold-btn">Mostrar</button>
+                <button type="button" onclick="postForm()" class="formbold-btn">Mostrar</button>
 
                 <div class="formhide formmember member2">
                     <!-- Form Cédula -->
