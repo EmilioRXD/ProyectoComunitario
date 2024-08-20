@@ -12,10 +12,10 @@
     <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
 
-            <div style=" display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
-                <img style="max-width: 50%;" src="../assets/undraw_no_data_re_kwbl.svg">
-            </div>
-            <form id="system-form">
+            <form class="formhide mostrar" id="system-form">
+                <div style=" display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
+                    <img style="max-width: 50%;" src="../assets/undraw_no_data_re_kwbl.svg">
+                </div>
 
                 <!-- action="https://formbold.com/s/FORM_ID" method="POST" -->
 
@@ -115,9 +115,9 @@
 
                     <!-- Form Parentesco -->
                     <div class="formbold-mb-3">
-                        <label for="kinship" class="formbold-form-label">¿Cuál es el parentesco con este miembro
+                        <label for="kinship1" class="formbold-form-label">¿Cuál es el parentesco con este miembro
                             familiar?</label>
-                        <select class="formbold-form-input" name="kinship" id="kinship">
+                        <select class="formbold-form-input" name="kinship1" id="kinship1">
                             <option value="" disabled selected>Seleccione un opción</option>
                             <option value="Cónyuge">Cónyuge</option>
                             <option value="Padre/Madre">Padre/Madre</option>
@@ -608,8 +608,13 @@
                     </label>
                 </div> -->
 
-                <button class="formbold-btn">Enviar</button>
+                <button type="submit" class="formbold-btn">Enviar</button>
             </form>
+
+            <div id="exito" class="formhide"
+                style=" display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
+                <img style="max-width: 50%;" src="../assets/undraw_completed_m9ci.svg">
+            </div>
         </div>
     </div>
     <script src="../js/app.js"></script>

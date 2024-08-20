@@ -1,3 +1,7 @@
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 const url = 'https://bptstnuslddxmbsbenpm.supabase.co/rest/v1/';
 const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwdHN0bnVzbGRkeG1ic2JlbnBtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjE5NTQ2MjQsImV4cCI6MjAzNzUzMDYyNH0.efhMi9nfxrcgRhg4LAF4pCCrZ8FH5DzML-xIf7Ku1-M';
 
@@ -22,7 +26,9 @@ function getDataBaseSupabase() {
 
 const form = document.getElementById('system-form');
 
-function postForm() {
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
   const person = [];
   const relationship = [];
 
@@ -44,7 +50,7 @@ function postForm() {
       })
     }
 
-    fetch(url + 'Persona', {
+    await fetch(`${url}Persona`, {
       method: 'POST',
       headers: {
         'apikey': apiKey,
@@ -63,7 +69,7 @@ function postForm() {
       })
       .catch(error => console.error('Request failed:', error));
 
-    fetch(url + 'Relacion', {
+    await fetch(`${url}Relacion`, {
       method: 'POST',
       headers: {
         'apikey': apiKey,
@@ -82,7 +88,7 @@ function postForm() {
       })
       .catch(error => console.error('Request failed:', error));
 
-    fetch(url + 'Contacto', {
+    await fetch(`${url}Contacto`, {
       method: 'POST',
       headers: {
         'apikey': apiKey,
@@ -105,5 +111,56 @@ function postForm() {
         }
       })
       .catch(error => console.error('Request failed:', error));
+  } else if (form.boss.value == 0) {
+    await fetch(`${url}Persona`, {
+      method: 'POST',
+      headers: {
+        'apikey': apiKey,
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        cedula: form.cedula1.value,
+        firstname: form.firstname1.value,
+        lastname: form.lastname1.value,
+        gender: form.gender1.value,
+        kinship: form.kinship1.value,
+        boss: form.streetBoss.value
+      })
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log('Data successfully sent.');
+        } else {
+          console.error('Error:', response.statusText);
+        }
+      })
+      .catch(error => console.error('Request failed:', error));
+
+    await fetch(`${url}Relacion`, {
+      method: 'POST',
+      headers: {
+        'apikey': apiKey,
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        cedula_jefe: form.relationship.value,
+        cedula: form.cedula1.value
+      })
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log('Data successfully sent.');
+        } else {
+          console.error('Error:', response.statusText);
+        }
+      })
+      .catch(error => console.error('Request failed:', error));
   }
-}
+  document.getElementById('system-form').classList.remove('mostrar');
+  await sleep(1000)
+  document.getElementById('exito').classList.add('mostrar');
+});
