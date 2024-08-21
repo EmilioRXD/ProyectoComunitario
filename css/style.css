@@ -33,6 +33,20 @@ h2 {
     margin-bottom: 10px;
 }
 
+.modal {
+    margin: auto;
+    padding: 1em;
+    border-radius: 1em;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .card {
     text-align: center;
     border-radius: 5px;

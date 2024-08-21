@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+
+            <form class="formhide mostrar" id="system-form">
+                <div style=" display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
+                    <img style="max-width: 50%;" src="../assets/undraw_people_search_re_5rre.svg">
+                </div>
+
+                <!-- Form Cédula -->
+                <div class="formbold-mb-3">
+                    <h3>Consultar Familia</h3>
+                    <label for="cedula1" class="formbold-form-label">Ingrese la cédula del Jefe de familia</label>
+                    <input type="text" name="cedula1" id="cedula1" placeholder="Ingrese la cédula"
+                        class="formbold-form-input">
+                </div>
+                <button type="button" class="formbold-btn" onclick="openModal()">Consultar</button>
+            </form>
+
+            <dialog class="modal" id="mainModal">
+                <h3>Familia</h3>
+                <h4>Jefe de Familia</h4>
+                <p>Cédula: </p>
+                <p>Nombre: </p>
+                <p>Apellido: </p>
+                <button type="button" class="formbold-btn" onclick="closeModal()">Cerrar Modal</button>
+            </dialog>
+        </div>
+    </div>
+    <script src="../js/modal.js"></script>
+</body>
+
+</html>
